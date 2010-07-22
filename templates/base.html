@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cseismic 2kx | {% block title %}{% endblock %}</title>
+        {% if request.is_secure %}
+        <meta http-equiv="X-XRDS-Location" content="https://{{ request.get_host }}{% url oid_xrdf %}" />
+        {% else %}
+        <meta http-equiv="X-XRDS-Location" content="http://{{ request.get_host }}{% url oid_xrdf %}" />  
+        {% endif %}
+        <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}/css/base.css" />
+    {% block head %}
+    {% endblock %}
+    </head>
+    <body>
+        <div class="user_info">
+            {% if request.user.is_authenticated %} 
+            Hello {{ request.user }}, <a href="{% url user_signout %}">Sign out</a>
+            {% else %}
+            <a href="{% url user_signin %}?next={{request.get_full_path}}">Log In</a> | <a href="{% url registration_register %}?next={{request.get_full_path}}">Register</a> 
+            {% endif %}
+        </div>
+        <div class="content">
+        {% block content %}
+            This website is under construction
+        {% endblock %}
+        </div>
+    </body>
+</html>
+    

@@ -1,0 +1,10 @@
+.content {
+    min-height: 600px;
+}
+.user_info {
+    float: right;
+}
+footer {
+    background-color: #eee;
+    text-align: center;
+}
