@@ -101,7 +101,7 @@ LOGIN_URL = '/account/signin'
 LOGOUT_URL = '/account/signout'
 LOGIN_REDIRECT_URL = '/'
 
-DEFAULT_FROM_EMAIL = 'no-reply@cseismic2kx.co.cc'
+DEFAULT_FROM_EMAIL = 'no-reply@cseismic2k10.co.cc'
 
 INSTALLED_APPS = (
     'django.contrib.auth',
