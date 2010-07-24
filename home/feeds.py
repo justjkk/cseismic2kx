@@ -9,7 +9,7 @@ class LatestNewsFeed(Feed):
         return NewsItem.objects.order_by('-date')[:5]
 
     def item_title(self, item):
-        return item.title
+        return item.date
 
     def item_description(self, item):
-        return item.description
+        return item.message
