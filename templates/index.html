@@ -5,5 +5,18 @@
             <h1 align="center">CSEISMIC 2K10</h1>
         </header>
         <center><i>&laquo;This website is under construction&raquo;</i></center>
+        <br/>
+        <div id="news_widget" class="ui-widget">
+            <div id="news_header" class="ui-widget-header">
+                Latest happenings
+            </div>
+            <div id="news_content" class="ui-widget-content">
+                <ul id="news" class="news" style="visibility:hidden">
+                    {% for item in news_items %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
     {% endblock %}
     

@@ -1,3 +1,19 @@
+body { 
+    background-color:#100;
+    color:#fff;
+}
+a {
+    color: #5ff;
+}
+a:hover {
+    color: #0f0;
+}
+a:visited {
+    color: #099;
+}
+ol,ul {
+    list-style:none;
+}
 .content {
     min-height: 600px;
 }
@@ -7,4 +23,13 @@
 footer {
     background-color: #eee;
     text-align: center;
+}
+.news {
+    font-style: italic;
+    font-size: small;
+}
+li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    vertical-align: middle;
 }

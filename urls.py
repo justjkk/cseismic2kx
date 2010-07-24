@@ -2,6 +2,9 @@ from django.conf.urls.defaults import *
 from django.conf import settings
 from django.views.generic.simple import direct_to_template
 from django.contrib import admin
+
+from home.feeds import LatestNewsFeed
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -19,4 +22,5 @@ urlpatterns = patterns('',
     url(r'^account/activate/complete/$', direct_to_template, { 'template': 'registration/activation_complete.html' }, name='registration_activation_complete'),
     url(r'^account/signup/$', 'registration.views.register', {'backend':'registration.backends.default.DefaultBackend' }, name='registration_register'),
     (r'^account/', include('django_authopenid.urls')),
+    (r'^feed/rss/', LatestNewsFeed()),
 )
