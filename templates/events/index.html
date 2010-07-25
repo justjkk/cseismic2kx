@@ -1,0 +1,36 @@
+{% extends "richbase.html" %}
+        {% block title %}Events{% endblock %}
+    {% block head %}
+        <script type="text/javascript">
+            $(document).ready( function() {
+                $('#events').accordion();
+            });
+        </script>
+    {% endblock %}
+    {% block content %}
+        <h2>Events</h2>
+        <div id="events">
+            {% for event in events %}
+                <h3>{{ event }}</h3>
+                <div>
+                    <h4>Description: </h4>
+                    <p>{{ event.description }}</p>
+                    <h4>Rules: </h4>
+                    <p>{{ event.rules }}</p>
+                    <h4>Coordinators: </h4>
+                    <ol style="list-style: decimal;">
+                        {% for coordinator in event.coordinators.all %}
+                            <li>
+                                {{ coordinator.name }}, {{ coordinator.get_academic_year_display }}
+                                <ul>
+                                    <li>Phone Number: {{ coordinator.contact_phone }}</li>
+                                    <li>Email Address: <a href="mailto:{{ coordinator.contact_email }}">{{ coordinator.contact_email }}</a></li>
+                                </ul>
+                            </li>
+                        {% endfor %}
+                    </ol>
+                </div>
+            {% endfor %}
+        </div>
+    {% endblock %}
+    

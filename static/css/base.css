@@ -1,5 +1,7 @@
 body { 
     background-color:#100;
+    margin-left: 50px;
+    margin-right: 50px;
     color:#fff;
 }
 a {
@@ -47,6 +49,18 @@ div {
     margin-right: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
+}
+h3 {
+    text-indent: 35px;
+}
+p {
+    font-size: medium;
+    text-indent: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    text-align: justify;
 }
 .license {
     font-size: small;

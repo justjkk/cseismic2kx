@@ -115,4 +115,6 @@ INSTALLED_APPS = (
     'django_authopenid',
     
     'cseismic2kx.home',
+    'cseismic2kx.events',
+    'cseismic2kx.host',
 )

@@ -22,5 +22,6 @@ urlpatterns = patterns('',
     url(r'^account/activate/complete/$', direct_to_template, { 'template': 'registration/activation_complete.html' }, name='registration_activation_complete'),
     url(r'^account/signup/$', 'registration.views.register', {'backend':'registration.backends.default.DefaultBackend' }, name='registration_register'),
     (r'^account/', include('django_authopenid.urls')),
+    (r'^events/', include('events.urls')),
     (r'^feed/rss/', LatestNewsFeed()),
 )
