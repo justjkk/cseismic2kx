@@ -3,7 +3,10 @@
     {% block head %}
         <script type="text/javascript">
             $(document).ready( function() {
-                $('#events').accordion();
+                $('#events').accordion({
+                    active: false,
+                    collapsible: true
+                });
             });
         </script>
     {% endblock %}
