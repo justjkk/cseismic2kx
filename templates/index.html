@@ -1,9 +1,9 @@
 {% extends "richbase.html" %}
 {% block title %}Home{% endblock %}
     {% block content %}
-        <div id="news_widget" class="ui-widget">
+        <div id="news_widget" class="ui-widget" onclick="location.href='/feed/rss';">
             <div id="news_header" class="ui-widget-header">
-                Latest happenings
+                Latest happenings <img src="{{ MEDIA_URL }}/images/rss30.gif" alt="This section is available as an RSS Feed">
             </div>
             <div id="news_content" class="ui-widget-content">
                 <ul id="news" class="news" style="visibility:hidden">
