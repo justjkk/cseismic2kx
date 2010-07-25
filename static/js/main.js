@@ -11,5 +11,6 @@ $(document).ready( function() {
     	runningclass: 'innerfade',
     });
     $('#news').css({ visibility: "visible"});
+    $('#menu').jqDock({labels: true, size: '80px'});
 });
 

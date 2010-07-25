@@ -20,8 +20,17 @@ ol,ul {
 .user_info {
     float: right;
 }
-footer {
-    background-color: #eee;
+.menu {
+    margin-top: 50px;
+    margin-left: 0px;
+}
+.jqDockWrap {
+    margin-right: 0px;
+}
+.menu img {
+    padding-right: 0px;
+}
+.footer {
     text-align: center;
 }
 .news {
@@ -32,4 +41,14 @@ li {
     padding-top: 5px;
     padding-bottom: 5px;
     vertical-align: middle;
+}
+div {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.license {
+    font-size: small;
+    text-align: center;
 }
