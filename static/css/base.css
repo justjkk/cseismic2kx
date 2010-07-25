@@ -24,8 +24,8 @@ ol,ul {
     margin-top: 50px;
     margin-left: 0px;
 }
-.jqDockWrap {
-    margin-right: 0px;
+.jqDock {
+    left: 0px !important;
 }
 .menu img {
     padding-right: 0px;
