@@ -2,10 +2,10 @@
 {% block title %}Home{% endblock %}
     {% block content %}
         <div id="news_widget" class="ui-widget" onclick="location.href='/feed/rss';">
-            <div id="news_header" class="ui-widget-header">
+            <div id="news_header" class="ui-widget-header ui-corner-top">
                 Latest happenings <img src="{{ MEDIA_URL }}/images/rss30.gif" alt="This section is available as an RSS Feed">
             </div>
-            <div id="news_content" class="ui-widget-content">
+            <div id="news_content" class="ui-widget-content ui-corner-bottom">
                 <ul id="news" class="news" style="visibility:hidden">
                     {% for item in news_items %}
                         <li>{{ item }}</li>

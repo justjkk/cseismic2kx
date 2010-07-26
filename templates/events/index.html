@@ -19,9 +19,9 @@
                     <h4>Description: </h4>
                     <p>{{ event.description }}</p>
                     <h4>Rules: </h4>
-                    <p>{{ event.rules }}</p>
+                    {% autoescape off %}{{ event.rules }}{% endautoescape %}
                     <h4>Coordinators: </h4>
-                    <ol style="list-style: decimal;">
+                    <ol>
                         {% for coordinator in event.coordinators.all %}
                             <li>
                                 {{ coordinator.name }}, {{ coordinator.get_academic_year_display }}

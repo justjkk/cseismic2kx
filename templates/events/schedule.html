@@ -1,0 +1,23 @@
+{% extends "richbase.html" %}
+        {% block title %}Events{% endblock %}
+    {% block head %}
+    {% endblock %}
+    {% block content %}
+        <h2>Schedule</h2>
+        <table border="0" width="100%" style="text-align: center;" class="ui-widget">
+            <tr class="ui-widget-header">
+                <th class="ui-corner-tl">Event</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th class="ui-corner-tr">Venue</th>
+            </tr>
+            {% for event in events %}
+            <tr class="ui-widget-content">
+                {% for attr in event %}
+                <td>{{ attr }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    {% endblock %}
+    

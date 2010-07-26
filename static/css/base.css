@@ -13,9 +13,6 @@ a:hover {
 a:visited {
     color: #099;
 }
-ol,ul {
-    list-style:none;
-}
 .content {
     min-height: 600px;
 }
@@ -38,6 +35,7 @@ ol,ul {
 .news {
     font-style: italic;
     font-size: small;
+    list-style: none;
 }
 li {
     padding-top: 5px;
@@ -63,6 +61,7 @@ p {
     text-align: justify;
 }
 .license {
+    background-color: #333;
     font-size: small;
     text-align: center;
 }

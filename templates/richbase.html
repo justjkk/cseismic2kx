@@ -32,10 +32,10 @@
         <br>
         <div id="menu" class="menu">
             <a href="/" ><img src="{{ MEDIA_URL }}/images/menu/Home.gif" alt="{{ MEDIA_URL }}/images/menu/Home.png"></a>
-            <a href="/events"><img src="{{ MEDIA_URL }}/images/menu/Events.gif" alt="{{ MEDIA_URL }}/images/menu/Events.png"></a>
-            <a href="/schedule"><img src="{{ MEDIA_URL }}/images/menu/Schedule.gif" alt="{{ MEDIA_URL }}/images/menu/Schedule.png"></a>
-            <a href="/account/signup"><img src="{{ MEDIA_URL }}/images/menu/Register.gif" alt="{{ MEDIA_URL }}/images/menu/Register.png"></a>
-            <a href="/contact"><img src="{{ MEDIA_URL }}/images/menu/Contact.gif" alt="{{ MEDIA_URL }}/images/menu/Contact.png"></a>
+            <a href="{% url events %}"><img src="{{ MEDIA_URL }}/images/menu/Events.gif" alt="{{ MEDIA_URL }}/images/menu/Events.png"></a>
+            <a href="{% url schedule %}"><img src="{{ MEDIA_URL }}/images/menu/Schedule.gif" alt="{{ MEDIA_URL }}/images/menu/Schedule.png"></a>
+            <a href="{% url registration_register %}"><img src="{{ MEDIA_URL }}/images/menu/Register.gif" alt="{{ MEDIA_URL }}/images/menu/Register.png"></a>
+            <a href="{% url contact_us %}"><img src="{{ MEDIA_URL }}/images/menu/Contact.gif" alt="{{ MEDIA_URL }}/images/menu/Contact.png"></a>
         </div>
         <br>
         <div class="content">
@@ -43,15 +43,16 @@
             This website is under construction
         {% endblock %}
         </div>
+        <hr>
         <div class="footer">
             <a href="/">Home</a> |
-            <a href="/events">Events</a> |
-            <a href="/schedule">Schedule</a> |
-            <a href="/contact">Contact Us</a> |
-            <a href="/sitemap">Sitemap</a>
+            <a href="{% url events %}">Events</a> |
+            <a href="{% url schedule %}">Schedule</a> |
+            <a href="{% url contact_us %}">Contact Us</a> |
+            <a href="{% url sitemap %}">Sitemap</a>
         </div>
         <div class="license">
-        <a rel="license" href="http://creativecommons.org/licenses/by/2.5/in/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/2.5/in/80x15.png" /></a><br /><span xmlns:dc="http://purl.org/dc/elements/1.1/" property="dc:title">Cseismic-2K10</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/2.5/in/">Creative Commons Attribution 2.5 India License</a>.
+        <a rel="license" href="http://creativecommons.org/licenses/by/2.5/in/"><img alt="Creative Commons License" style="border-width:0" src="{{ MEDIA_URL }}/images/ccby80x15.png" /></a><br /><span xmlns:dc="http://purl.org/dc/elements/1.1/" property="dc:title">Cseismic-2K10</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/2.5/in/">Creative Commons Attribution 2.5 India License</a>.
         </div>
     </body>
 </html>
