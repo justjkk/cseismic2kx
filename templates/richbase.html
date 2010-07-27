@@ -25,11 +25,10 @@
             <a href="{% url user_signin %}?next={{request.get_full_path}}">Log In</a> | <a href="{% url registration_register %}?next={{request.get_full_path}}">Register</a> 
             {% endif %}
         </div>
-        <header>
-            <h1 style="text-align: center;">CSEISMIC 2K10</h1>
-            <center><i>&laquo;This website is under construction&raquo;</i></center>
+        <header width="100%" style="text-align: center;">
+            <img width="500px" src="{{ MEDIA_URL }}/images/cseismic2k10.png" alt="Cseismic-2K10"><br>
+            <div class="ui-state-error">&laquo;This website is under construction&raquo;</div>
         </header>
-        <br>
         <div id="menu" class="menu">
             <a href="/" ><img src="{{ MEDIA_URL }}/images/menu/Home.gif" alt="{{ MEDIA_URL }}/images/menu/Home.png"></a>
             <a href="{% url events %}"><img src="{{ MEDIA_URL }}/images/menu/Events.gif" alt="{{ MEDIA_URL }}/images/menu/Events.png"></a>

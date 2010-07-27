@@ -8,7 +8,7 @@
             <div id="news_content" class="ui-widget-content ui-corner-bottom">
                 <ul id="news" class="news" style="visibility:hidden">
                     {% for item in news_items %}
-                        <li>{{ item }}</li>
+                        <li>{% autoescape off %}{{ item }}{% endautoescape %}</li>
                     {% endfor %}
                 </ul>
             </div>
