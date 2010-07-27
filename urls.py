@@ -24,6 +24,7 @@ urlpatterns = patterns('',
     (r'^account/', include('django_authopenid.urls')),
     (r'^events/', include('events.urls')),
     url(r'^contact$', 'host.views.contact_us', name='contact_us'),
+    url(r'^gallery$', 'home.views.gallery', name='gallery'),    
     (r'^feed/rss/', LatestNewsFeed()),
     url(r'^sitemap$', 'home.views.sitemap', name='sitemap'),
 )
