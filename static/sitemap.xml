@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://cseismic2k10.co.cc/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://cseismic2k10.co.cc/account/signin/?next=/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://cseismic2k10.co.cc/account/signup/?next=/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://cseismic2k10.co.cc/events/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://cseismic2k10.co.cc/events/schedule</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://cseismic2k10.co.cc/account/signup/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://cseismic2k10.co.cc/gallery</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://cseismic2k10.co.cc/contact</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://cseismic2k10.co.cc/sitemap</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://cseismic2k10.co.cc/account/password/reset/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://cseismic2k10.co.cc/account/signin/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://cseismic2k10.co.cc/account/signin/?next=/events/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://cseismic2k10.co.cc/account/signup/?next=/events/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://cseismic2k10.co.cc/account/signin/?next=/events/schedule</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://cseismic2k10.co.cc/account/signup/?next=/events/schedule</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://cseismic2k10.co.cc/account/signin/?next=/gallery</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://cseismic2k10.co.cc/account/signup/?next=/gallery</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://cseismic2k10.co.cc/account/signin/?next=/contact</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://cseismic2k10.co.cc/account/signup/?next=/contact</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://cseismic2k10.co.cc/account/signin/?next=/sitemap</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://cseismic2k10.co.cc/account/signup/?next=/sitemap</loc>
+  <changefreq>daily</changefreq>
+</url>
+</urlset>

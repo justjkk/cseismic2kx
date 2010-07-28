@@ -2,6 +2,7 @@ from django.conf.urls.defaults import *
 from django.conf import settings
 from django.views.generic.simple import direct_to_template
 from django.contrib import admin
+from django.views.generic.simple import redirect_to
 
 from home.feeds import LatestNewsFeed
 
@@ -27,4 +28,5 @@ urlpatterns = patterns('',
     url(r'^gallery$', 'home.views.gallery', name='gallery'),    
     (r'^feed/rss/', LatestNewsFeed()),
     url(r'^sitemap$', 'home.views.sitemap', name='sitemap'),
+    url(r'^sitemap\.xml$', lambda req: redirect_to(req,'/static/sitemap.xml'))
 )
