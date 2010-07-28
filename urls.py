@@ -28,5 +28,6 @@ urlpatterns = patterns('',
     url(r'^gallery$', 'home.views.gallery', name='gallery'),    
     (r'^feed/rss/', LatestNewsFeed()),
     url(r'^sitemap$', 'home.views.sitemap', name='sitemap'),
+    url(r'^robots\.txt$', lambda req: redirect_to(req,'/static/robots.txt')),
     url(r'^sitemap\.xml$', lambda req: redirect_to(req,'/static/sitemap.xml'))
 )
