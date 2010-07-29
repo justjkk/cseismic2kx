@@ -1,11 +1,17 @@
-body { 
-    background-color:#100;
-    margin-left: 50px;
-    margin-right: 50px;
+body {
+    
+    background-color: #020f22;
+    background-image: url(/static/images/background1.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    width: 1010px;
+    background-repeat: no-repeat;
+    margin: 0 auto;
     color:#fff;
 }
 a {
-    color: #5ff;
+/*    color: #5ff; */
+    color: #0ff;
 }
 a:hover {
     color: #0f0;
@@ -13,8 +19,11 @@ a:hover {
 a:visited {
     color: #099;
 }
+a:visited:hover {
+    color: #0f0;
+}
 .content {
-    min-height: 600px;
+    min-height: 400px;
 }
 .user_info {
     float: right;
@@ -64,4 +73,7 @@ p {
     background-color: #333;
     font-size: small;
     text-align: center;
+}
+.ui-widget {
+    opacity: .9;
 }

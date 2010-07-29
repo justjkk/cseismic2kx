@@ -100,6 +100,7 @@ ACCOUNT_ACTIVATION_DAYS = 10
 LOGIN_URL = '/account/signin'
 LOGOUT_URL = '/account/signout'
 LOGIN_REDIRECT_URL = '/'
+REGISTRATION_OPEN = False
 
 DEFAULT_FROM_EMAIL = 'no-reply@cseismic2k10.co.cc'
 
