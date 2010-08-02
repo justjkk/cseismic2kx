@@ -19,12 +19,21 @@
                     <h4>Description: </h4>
                     <p>{{ event.description }}</p>
                     <h4>Rules: </h4>
-                    {% autoescape off %}{{ event.rules }}{% endautoescape %}
+                    {% autoescape off %}
+                    <div class="rules">
+                        {{ event.rules }}
+                    </div>
+                    {% if event.additional_info %}
+                    <div class="additional_info">
+                        {{ event.additional_info }}
+                    </div>
+                    {% endif %}                    
+                    {% endautoescape %}
                     <h4>Coordinators: </h4>
                     <ol>
-                        {% for coordinator in event.coordinators.all %}
+                        {% for coordinator in event.list_coordinators %}
                             <li>
-                                {{ coordinator.name }}, {{ coordinator.get_academic_year_display }}
+                                {{ coordinator.fullname }}, {{ coordinator.get_academic_year_display }}
                                 <ul>
                                     <li>Phone Number: {{ coordinator.contact_phone }}</li>
                                     <li>Email Address: <a href="mailto:{{ coordinator.contact_email }}">{{ coordinator.contact_email }}</a></li>
