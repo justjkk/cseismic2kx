@@ -30,14 +30,10 @@
                     {% endif %}                    
                     {% endautoescape %}
                     <h4>Coordinators: </h4>
-                    <ol>
+                    <ul>
                         {% for coordinator in event.list_coordinators %}
-                            <li>
-                                {{ coordinator.fullname }}, {{ coordinator.get_academic_year_display }}
-                                <ul>
-                                    <li>Phone Number: {{ coordinator.contact_phone }}</li>
-<!--                                    <li>Email Address: <a href="mailto:{{ coordinator.contact_email }}">{{ coordinator.contact_email }}</a></li-->
-                                </ul>
+                            <li class="coordinator">
+                                {{ coordinator.fullname }}, {{ coordinator.get_academic_year_display }} - Ph: {{ coordinator.contact_phone }}
                             </li>
                         {% endfor %}
                     </ol>
