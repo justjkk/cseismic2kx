@@ -12,31 +12,17 @@
     {% endblock %}
     {% block content %}
         <h2>Events</h2>
-        <div id="events">
+        <div id="events" class="accordion">
             {% for event in events %}
                 <h3>{{ event }}</h3>
                 <div>
                     <h4>Description: </h4>
                     <p>{{ event.description }}</p>
-                    <h4>Rules: </h4>
-                    {% autoescape off %}
-                    <div class="rules">
-                        {{ event.rules }}
-                    </div>
-                    {% if event.additional_info %}
-                    <div class="additional_info">
-                        {{ event.additional_info }}
-                    </div>
-                    {% endif %}                    
-                    {% endautoescape %}
-                    <h4>Coordinators: </h4>
-                    <ul>
-                        {% for coordinator in event.list_coordinators %}
-                            <li class="coordinator">
-                                {{ coordinator.fullname }}, {{ coordinator.get_academic_year_display }} - Ph: {{ coordinator.contact_phone }}
-                            </li>
-                        {% endfor %}
-                    </ol>
+                    <h4>Time: </h4>
+                    <p class="oneliner">{{ event.start_time }} to {{ event.end_time }}</p>
+                    <h4>Venue: </h4>
+                    <p class="oneliner">{{ event.venue }}</p>
+                    <a href="{% url event_details event.slug %}">&raquo;More...</a>
                 </div>
             {% endfor %}
         </div>

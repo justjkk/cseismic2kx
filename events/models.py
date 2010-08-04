@@ -9,7 +9,7 @@ class Event(models.Model):
     start_time = models.TimeField(null=True, blank=True)
     end_time = models.TimeField(null=True, blank=True)
     venue = models.CharField(max_length=50, null=True, blank=True)
-    
+    slug = models.SlugField(null=True, blank=True)
     class Meta:
         ordering = ['start_time', 'end_time']
     

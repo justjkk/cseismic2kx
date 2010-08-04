@@ -1,4 +1,4 @@
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 from datetime import time
 
@@ -7,6 +7,10 @@ from models import Event
 def index(request):
     events = Event.objects.all()
     return render_to_response('events/index.html', {'events': events}, context_instance=RequestContext(request), mimetype='text/html')
+
+def event_details(request, slug):
+    event = get_object_or_404(Event, slug=slug)
+    return render_to_response('events/event_details.html', {'event': event}, context_instance=RequestContext(request), mimetype='text/html')
     
 def schedule(request):
     events = Event.objects.all()
