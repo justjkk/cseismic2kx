@@ -89,3 +89,16 @@ p {
 .additional_info {
     font-size: medium;
 }
+.errors {
+    color: red;
+    font-weight: bolder;
+}
+.errorlist {
+    color: red;
+    font-weight: bold;
+    font-size: small;
+}
+.sign_up_table tr td,th {
+    padding-top: 30px;
+    vertical-align: center;
+}

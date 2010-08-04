@@ -4,7 +4,9 @@ from django.views.generic.simple import direct_to_template
 from django.contrib import admin
 from django.views.generic.simple import redirect_to
 
+import participantsprofile.regbackend
 from home.feeds import LatestNewsFeed
+from participantsprofile.forms import UserRegistrationForm
 
 admin.autodiscover()
 
@@ -21,7 +23,7 @@ urlpatterns = patterns('',
     (r'^$', 'home.views.index'),
     url(r'^account/activate/(?P<activation_key>\w+)/$', 'registration.views.activate', { 'backend': 'registration.backends.default.DefaultBackend' }, name='registration_activate'),
     url(r'^account/activate/complete/$', direct_to_template, { 'template': 'registration/activation_complete.html' }, name='registration_activation_complete'),
-    url(r'^account/signup/$', 'registration.views.register', {'backend':'registration.backends.default.DefaultBackend' }, name='registration_register'),
+    url(r'^account/signup/$', 'registration.views.register', {'backend':'registration.backends.default.DefaultBackend', 'form_class':UserRegistrationForm }, name='registration_register'),
     url(r'^register/closed/$', direct_to_template, { 'template': 'registration/registration_closed.html' }, name='registration_disallowed'),
 
     (r'^account/', include('django_authopenid.urls')),

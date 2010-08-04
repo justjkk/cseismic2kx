@@ -100,7 +100,8 @@ ACCOUNT_ACTIVATION_DAYS = 10
 LOGIN_URL = '/account/signin'
 LOGOUT_URL = '/account/signout'
 LOGIN_REDIRECT_URL = '/'
-REGISTRATION_OPEN = False
+REGISTRATION_OPEN = True
+AUTH_PROFILE_MODULE = 'participantsprofile.profile'
 
 DEFAULT_FROM_EMAIL = 'no-reply@cseismic2k10.co.cc'
 
@@ -111,11 +112,12 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.admin',
-    'registration',
     'south',
     'django_authopenid',
     
     'cseismic2kx.home',
     'cseismic2kx.events',
     'cseismic2kx.host',
+    'cseismic2kx.registration',
+    'cseismic2kx.participantsprofile',
 )
