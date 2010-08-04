@@ -33,5 +33,6 @@ urlpatterns = patterns('',
     (r'^feed/rss/', LatestNewsFeed()),
     url(r'^sitemap$', 'home.views.sitemap', name='sitemap'),
     url(r'^robots\.txt$', lambda req: redirect_to(req,'/static/robots.txt')),
+    (r'^favicon.ico$', lambda req: redirect_to(req,'/static/images/favicon.ico')),
     url(r'^sitemap\.xml$', lambda req: redirect_to(req,'/static/sitemap.xml'))
 )
