@@ -2,6 +2,9 @@
 <html>
     <head>
         <title>Cseismic 2k10 | {% block title %}{% endblock %}</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Cseismic 2k10 is a National level Technical Symposium conducted by Department of Computer Science and Engineering, KCG College of Technology, Chennai. The date of the symposium is 28th August 2010.">
+        <meta name="keywords" content="symposium, college, B.E, CSE, K.C.G., Cseismic, fest, event">
         {% if request.is_secure %}
         <meta http-equiv="X-XRDS-Location" content="https://{{ request.get_host }}{% url oid_xrdf %}" />
         {% else %}
@@ -55,6 +58,7 @@
         </div>
         <div class="license">
         <a rel="license" href="http://creativecommons.org/licenses/by/2.5/in/"><img alt="Creative Commons License" style="border-width:0" src="{{ MEDIA_URL }}/images/ccby80x15.png" /></a><br /><span xmlns:dc="http://purl.org/dc/elements/1.1/" property="dc:title">Cseismic-2K10</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/2.5/in/">Creative Commons Attribution 2.5 India License</a>.
+        <div>Website is created and maintained by <a href="http://github.com/jkk10/cseismic2kx">jkk</a></div>
         </div>
     </body>
 </html>
