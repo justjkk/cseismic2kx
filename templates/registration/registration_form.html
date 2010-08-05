@@ -17,6 +17,20 @@
 	    <legend>{% trans "Create a new account" %}</legend>
 	    <table class="sign_up_table">
 		    {{ form.as_table }}
+		    <script type="text/javascript">
+		        var slcollege = document.getElementById('id_college');
+		        slcollege.onchange = function () {
+	    	        if(slcollege.value == "-1")
+	    	        {
+	    	            document.getElementById('id_add_your_college').disabled = false;
+                    }
+                    else
+                    {
+                        document.getElementById('id_add_your_college').disabled = true;
+                    }
+                };
+                slcollege.onchange();
+		    </script>
 	    </table>
 	    <p><input type="submit" name="bsignup'" value="{% trans "Sign up" %}"> </p>
 	 </fieldset>
