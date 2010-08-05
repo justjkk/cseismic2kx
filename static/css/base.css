@@ -98,6 +98,9 @@ p {
 .accordion {
     font-size: medium!important;
 }
+.ui-accordion-header {
+    text-indent: 30px;
+}
 p.oneliner {
     margin: 5px 5px 5px 5px;
     padding: 5px 5px 5px 5px;
