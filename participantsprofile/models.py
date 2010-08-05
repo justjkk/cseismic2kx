@@ -9,6 +9,9 @@ User_Types = (
 class College(models.Model):
     name = models.CharField(max_length=150)
     
+    class Meta:
+        ordering = ('name',)
+
     def __unicode__(self):
         return self.name
 
@@ -22,6 +25,8 @@ class Participant(models.Model):
     college = models.ForeignKey(College, related_name='participants')
     roll_no = models.CharField(max_length=8)
     
+    class Meta:
+        ordering = ('college',)
     def __unicode__(self):
         return 'Participant - ' + str(self.name)
 
