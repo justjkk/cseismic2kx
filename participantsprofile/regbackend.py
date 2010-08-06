@@ -23,7 +23,6 @@ def user_created(sender, user, request, **kwargs):
     participant.save()
     for e in form.data.getlist('events'):
         participant.events.add(e)
-        print e
 
 from registration.signals import user_registered
 user_registered.connect(user_created)
