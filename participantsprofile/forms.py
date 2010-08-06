@@ -15,7 +15,7 @@ def get_colleges_list():
 def get_events_list():
     events_list = ()
     for e in Event.objects.all():
-        events_list += ((e.id, e.caption),)
+        events_list += ((e.id, str(e)),)
     return events_list
 
 class UserRegistrationForm(RegistrationForm):
