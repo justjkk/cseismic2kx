@@ -95,6 +95,12 @@ p {
     padding-top: 30px;
     vertical-align: center;
 }
+.sign_up_table ul {
+    list-style: none;
+}
+.participant_events_form ul {
+    list-style: none;
+}
 .accordion {
     font-size: medium!important;
 }

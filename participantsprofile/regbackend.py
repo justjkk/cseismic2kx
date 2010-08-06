@@ -21,6 +21,9 @@ def user_created(sender, user, request, **kwargs):
         participant.college = College.objects.get(pk=form.data["college"])
     participant.roll_no = form.data['rollno']
     participant.save()
+    for e in form.data.getlist('events'):
+        participant.events.add(e)
+        print e
 
 from registration.signals import user_registered
 user_registered.connect(user_created)

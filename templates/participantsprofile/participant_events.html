@@ -1,0 +1,15 @@
+{% extends "richbase.html" %}
+        {% block title %}Event Participation{% endblock %}
+    {% block head %}
+    {% endblock %}
+    {% block content %}
+        <h2>Event Participation</h2>
+        <h3>Check the Events that you wish to participate in:</h3>
+        <form action="" class="participant_events_form" method="POST">
+            {% csrf_token %}
+            {{ form.as_table }}
+            <input type="submit" name="bsignup" value="Update">
+        </form>
+        
+    {% endblock %}
+    
