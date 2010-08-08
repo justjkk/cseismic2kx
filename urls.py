@@ -29,6 +29,7 @@ urlpatterns = patterns('',
 
     (r'^account/', include('django_authopenid.urls')),
     (r'^events/', include('events.urls')),
+    (r'^captcha/', include('captcha.urls')),
     url(r'^contact$', 'host.views.contact_us', name='contact_us'),
     url(r'^gallery$', 'home.views.gallery', name='gallery'),    
     (r'^feed/rss/', LatestNewsFeed()),

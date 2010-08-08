@@ -4,6 +4,7 @@ from models import UserProfile
 from registration.models import RegistrationProfile
 from models import College
 from events.models import Event
+from captcha.fields import CaptchaField
 
 def get_colleges_list():
     colleges_list = ()
@@ -25,6 +26,7 @@ class UserRegistrationForm(RegistrationForm):
     add_your_college = forms.CharField(required=False, help_text='Enter your college name if not chosen above')
     rollno = forms.CharField()
     events = forms.MultipleChoiceField(choices=(), widget=forms.CheckboxSelectMultiple, required=False)
+    captcha = CaptchaField(help_text='Type the characters you see on the left in the above textbox')
     
     def __init__(self, *args, **kwargs):
         super(UserRegistrationForm, self).__init__(*args, **kwargs)

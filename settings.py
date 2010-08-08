@@ -120,4 +120,5 @@ INSTALLED_APPS = (
     'cseismic2kx.host',
     'cseismic2kx.registration',
     'cseismic2kx.participantsprofile',
+    'cseismic2kx.captcha',
 )
