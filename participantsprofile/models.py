@@ -24,7 +24,7 @@ class Participant(models.Model):
 
     college = models.ForeignKey(College, related_name='participants')
     roll_no = models.CharField(max_length=8)
-    events = models.ManyToManyField(Event)
+    events = models.ManyToManyField(Event, null=True, blank=True)
     class Meta:
         ordering = ('college',)
     def __unicode__(self):
