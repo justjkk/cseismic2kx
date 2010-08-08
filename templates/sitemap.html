@@ -6,18 +6,22 @@
         <ul>
             <li>Account
             <ul>
-                <li>Sign In - <a href="http://cseismic2k10.co.cc/account/signin/">http://cseismic2k10.co.cc/account/signin/</a></li>
-                <li>Sign Up - <a href="http://cseismic2k10.co.cc/account/signup/">http://cseismic2k10.co.cc/account/signup/</a></li>
-                <li>Password Reset - <a href="http://cseismic2k10.co.cc/account/password/reset/">http://cseismic2k10.co.cc/account/password/reset/</a></li>
+                <li>Sign In - <a href="{% url user_signin %}">{% url user_signin %}</a></li>
+                <li>Sign Up - <a href="{% url registration_register %}">{% url registration_register %}</a></li>
+                <li>Password Reset - <a href="{% url auth_password_reset %}">{% url auth_password_reset %}</a></li>
+                <li>Event Participation - <a href="{% url participant_events %}">{% url participant_events %}</a></li>
             </ul>
             </li>
-            <li>Events - <a href="http://cseismic2k10.co.cc/events/">http://cseismic2k10.co.cc/events/</a>
+            <li>Events - <a href="{% url events %}">{% url events %}</a>
             <ul>
-                <li>Schedule - <a href="http://cseismic2k10.co.cc/events/schedule">http://cseismic2k10.co.cc/events/schedule</a></li>
+                {% for event in events %}
+                <li>{{ event }} - <a href="{% url event_details event.slug %}">{% url event_details event.slug %}</a>
+                </li>
+                {% endfor %}
             </ul>
-            </li>
-            <li>Gallery - <a href="http://cseismic2k10.co.cc/gallery">http://cseismic2k10.co.cc/gallery</a></li>
-            <li>Sitemap - <a href="http://cseismic2k10.co.cc/sitemap">http://cseismic2k10.co.cc/sitemap</a></li>
+            <li>Schedule - <a href="{% url schedule %}">{% url schedule %}</a></li>
+            <li>Gallery - <a href="{% url gallery %}">{% url gallery %}</a></li>
+            <li>Sitemap - <a href="{% url sitemap %}">{% url sitemap %}</a></li>
         </ul>
         </div>
     {% endblock %}
