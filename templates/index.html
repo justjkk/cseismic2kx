@@ -1,9 +1,16 @@
 {% extends "richbase.html" %}
 {% block title %}Home{% endblock %}
+    {% block head %}
+    <style type="text/css">
+    .p_img {
+        float: left;
+    }
+    </style>
+    {% endblock %}
     {% block content %}
-        <div id="news_widget" class="ui-widget" onclick="location.href='/feed/rss';">
+        <div id="news_widget" class="ui-widget" onclick="location.href='{% url feed_rss %}';">
             <div id="news_header" class="ui-widget-header ui-corner-top">
-                Latest happenings <img width="25px" height="25px" src="{{ MEDIA_URL }}/images/rss25.gif" alt="This section is available as an RSS Feed">
+                Latest happenings <img width="25" height="25" src="{{ MEDIA_URL }}/images/rss25.gif" alt="This section is available as an RSS Feed">
             </div>
             <div id="news_content" class="ui-widget-content ui-corner-bottom">
                 <ul id="news" class="news" style="visibility:hidden">
@@ -19,7 +26,7 @@
                About the College
             </div>
             <div class="ui-widget-content">
-                <img class="p_img" width="200px" height="131px" src="{{ MEDIA_URL }}/images/kcg_college_image.jpg" align="left"/>
+                <img class="p_img" width="200" height="131" src="{{ MEDIA_URL }}/images/kcg_college_image.jpg" />
                 <p>KCG College of Technology (KC Tech) was established in 1998 and is affiliated to the Anna University and also approved by the All India Council for Technical Education (AICTE), Government of India, New Delhi and Government of Tamil Nadu. It is the latest addition to the Hindustan Group of Institutions. The vision of the College is " to develop KC Tech into an Institution of Excellence in Engineering Education at Graduate and Post Graduate level and to carry out quality research in Science, Engineering and Technology".</p>
                 <p>Academic core philosophy is rooted in the belief that education, beyond knowledge must point the way to self-fulfillment through the development of the entire personality. By optimizing their potential and providing them direction through a cohesive training program, the KC Tech team will empower each student to successfully confront and overcome the formidable competition that awaits them in the global market place.</p>
             </div>
@@ -30,7 +37,7 @@
                 About the Department
             </div>
             <div class="ui-widget-content">
-                <img class="p_img" width="120px" height="120px" src="{{ MEDIA_URL }}/images/CSE_logo_blue.png" align="left"/>
+                <img class="p_img" width="120" height="120" src="{{ MEDIA_URL }}/images/CSE_logo_blue.png" />
                 <p>The department of Computer Science and Engineering (CSE) at KC Tech is well renowed for its excellence in education and for impart the state of art education. Today the department has vibrant student body numbering about 480. The department promises to produce refined, skilled and competent students.</p>
                 <p>Computer Science and engineering graduates are the pillars in the current and emerging information era. Opportunities include pursuing Master of Science programs in reputed Universities of U.S. and taking up research assignments in Hardware, System Software, Computer Engineering, Multimedia, Networking and Communications areas.</p>
             </div>
@@ -41,7 +48,7 @@
                About the Symposium
             </div>
             <div class="ui-widget-content">
-                <img class="p_img" width="180px" height="120px" src="{{ MEDIA_URL }}/images/Cseismic2k10_rr.gif" align="left"/>
+                <img class="p_img" width="180" height="120" src="{{ MEDIA_URL }}/images/Cseismic2k10_rr.gif" />
                 <p>It's time to feel the impact of 'CSEISMIC 2K10', this August with high profiled technical students competing to expose their innovative ideas. 'CSEISMIC 2K10' aims at motivating the students to bring out the hidden talent. The variety of ideas, issues and events that 'CSEISMIC 2K10' offers is unparalleled. 'CSEISMIC 2K10' is the place where you can innovate your thoughts and realize your potentials.</p>
             </div>
         </div>
