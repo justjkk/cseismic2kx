@@ -14,7 +14,7 @@ def participant_events(request):
         for e in form.data.getlist('events'):
             if e not in [e.id for e in participant.events.all()]:
                 participant.events.add(e)
-        return HttpResponseRedirect('./')
+        return HttpResponseRedirect('/')
     else:
         participant = request.user.get_profile().participant_set.all()[0]
         events = [ e.id for e in participant.events.all()]
