@@ -13,3 +13,9 @@ class NewsItem(models.Model):
             return '<a href="'+self.link+'">'+self.message+'</a>'
     class Meta:
       ordering = ['-date']
+      
+class YoutubeVideo(models.Model):
+    video_id = models.CharField(max_length=255)
+    
+    def __unicode__(self):
+        return 'http://www.youtube.com/v/'+self.video_id
