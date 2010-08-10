@@ -15,7 +15,7 @@ def event_details(request, slug):
 def schedule(request):
     events = Event.objects.all()
     scheduled_events = [(e.caption, e.start_time, e.end_time, e.venue) for e in events]
-    scheduled_events += (('Inaugeration Function', time(9), time(10,00), 'KMC Auditorium'),)
+    scheduled_events += (('Inauguration Function', time(9), time(10,00), 'KMC Auditorium'),)
     scheduled_events += (('Lunch', time(12), time(13), 'Canteen'),)
     scheduled_events += (('Valedictory & Prize distribution', time(16), None, 'Digital Library'),)
     for i in range(0,len(scheduled_events)):
