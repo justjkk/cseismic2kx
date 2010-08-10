@@ -23,7 +23,7 @@ class Participant(models.Model):
     phone_no = models.CharField(max_length=12)
 
     college = models.ForeignKey(College, related_name='participants')
-    roll_no = models.CharField(max_length=8)
+    roll_no = models.CharField(max_length=15)
     events = models.ManyToManyField(Event, null=True, blank=True)
     class Meta:
         ordering = ('college',)
