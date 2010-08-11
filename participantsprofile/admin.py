@@ -12,6 +12,13 @@ class ParticipantAdmin(admin.ModelAdmin):
     )
     ordering = ('college',)
 
+class ParticipantEventAdmin(admin.ModelAdmin):
+    list_display = (
+        'participant',
+        'event'
+    )
+    ordering = ('event__id',)
+
 class CollegeAdmin(admin.ModelAdmin):
     inlines = [
                 ParticipantInline,
@@ -20,3 +27,4 @@ admin.site.register(UserProfile)
 admin.site.register(Participant, ParticipantAdmin)
 admin.site.register(College, CollegeAdmin)
 admin.site.register(Team)
+admin.site.register(Participant.events.through, ParticipantEventAdmin)
