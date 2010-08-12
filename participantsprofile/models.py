@@ -35,7 +35,7 @@ class UserProfile(models.Model):
    user_type = models.CharField(max_length=1, choices=User_Types)
    def __unicode__(self):
       if self.user_type == 'P':
-         participant = Participant.objects.filter(user=self.user)
+         participant = Participant.objects.filter(user=self)
          if participant:
             return (participant[0].name)
       return (str)(self.user)
