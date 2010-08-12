@@ -5,15 +5,17 @@ from datetime import time
 from models import Event
 
 def index(request):
-    events = Event.objects.all()
+    events = Event.objects.filter(is_active=True)
     return render_to_response('events/index.html', {'events': events}, context_instance=RequestContext(request), mimetype='text/html')
 
 def event_details(request, slug):
     event = get_object_or_404(Event, slug=slug)
+    if not event.is_active:
+	return render_to_response('events/disabled_event.html', {'event':event}, context_instance=RequestContext(request), mimetype='text/html')
     return render_to_response('events/event_details.html', {'event': event}, context_instance=RequestContext(request), mimetype='text/html')
     
 def schedule(request):
-    events = Event.objects.all()
+    events = Event.objects.filter(is_active=True)
     scheduled_events = [(e.caption, e.start_time, e.end_time, e.venue) for e in events]
     scheduled_events += (('Inauguration Function', time(9), time(10,00), 'KMC Auditorium'),)
     scheduled_events += (('Lunch', time(12), time(13), 'Canteen'),)
