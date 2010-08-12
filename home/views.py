@@ -12,5 +12,5 @@ def gallery(request):
     return render_to_response('gallery.html', {'youtube_video_ids':youtube_video_ids}, context_instance=RequestContext(request), mimetype='text/html')
 
 def sitemap(request):
-    e = Event.objects.all()
+    e = Event.objects.filter(is_active=True)
     return render_to_response('sitemap.html', {'events': e}, context_instance=RequestContext(request), mimetype='text/html')

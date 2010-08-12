@@ -1,0 +1,16 @@
+{% extends "richbase.html" %}
+        {% block title %}{{ event }}{% endblock %}
+    {% block content %}
+        <div class="ui-widget">
+            <div class="ui-widget-header">
+                {{ event.caption }} | {{ event.classic_name }}
+            </div>
+            <div class="ui-widget-content">
+                <div class="ui-state-error">
+                We are sorry but this event has been cancelled. Please participate in the new events added.
+                </div>
+                <a href="{% url events %}">&laquo;Back to Events...</a>
+            </div>
+        </div>
+    {% endblock %}
+    

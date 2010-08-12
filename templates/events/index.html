@@ -17,7 +17,9 @@
                 <h3>{{ event }}</h3>
                 <div>
                     <h4>Description: </h4>
+                    {% autoescape off %}
                     <p>{{ event.description }}</p>
+                    {% endautoescape %}
                     <h4>Time: </h4>
                     <p class="oneliner">{{ event.start_time }} to {{ event.end_time }}</p>
                     <h4>Venue: </h4>

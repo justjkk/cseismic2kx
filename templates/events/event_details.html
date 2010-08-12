@@ -7,9 +7,9 @@
             </div>
             <div class="ui-widget-content">
                 <h4>Description: </h4>
-                <p>{{ event.description }}</p>
+		{% autoescape off %}
+                <div class="description">{{ event.description }}</div>
                 <h4>Rules: </h4>
-                {% autoescape off %}
                 <div class="rules">
                     {{ event.rules }}
                 </div>
