@@ -33,7 +33,8 @@
     <body>
         <div class="user_info">
             {% if request.user.is_authenticated %} 
-            Hello {{ request.user }}, <a href="{% url user_signout %}?next=/">Sign out</a>
+            Hello {{ request.user }}, <a href="{% url user_signout %}?next=/">Sign out</a><br/>
+            <a href="{% url participant_events %}">Update Event Participation</a>
             {% else %}
             <a href="{% url user_signin %}?next={{request.get_full_path}}">Log In</a> | <a href="{% url registration_register %}?next={{request.get_full_path}}">Register</a> 
             {% endif %}
