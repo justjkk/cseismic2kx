@@ -4,11 +4,13 @@ from django.views.generic.simple import direct_to_template
 from django.contrib import admin
 from django.views.generic.simple import redirect_to
 
+import reporting
 import participantsprofile.regbackend
 from home.feeds import LatestNewsFeed
 from participantsprofile.forms import UserRegistrationForm
 
 admin.autodiscover()
+reporting.autodiscover()
 
 urlpatterns = patterns('',
     # Example:
@@ -30,6 +32,7 @@ urlpatterns = patterns('',
     (r'^account/', include('django_authopenid.urls')),
     (r'^events/', include('events.urls')),
     (r'^captcha/', include('captcha.urls')),
+    (r'^reporting/', include('reporting.urls')),
     url(r'^contact$', 'host.views.contact_us', name='contact_us'),
     url(r'^gallery$', 'home.views.gallery', name='gallery'),    
     url(r'^feed/rss/', LatestNewsFeed(), name='feed_rss'),

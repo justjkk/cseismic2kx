@@ -106,6 +106,7 @@ AUTH_PROFILE_MODULE = 'participantsprofile.UserProfile'
 DEFAULT_FROM_EMAIL = 'no-reply@cseismic2k10.co.cc'
 
 INSTALLED_APPS = (
+    'cseismic2kx.reporting',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
