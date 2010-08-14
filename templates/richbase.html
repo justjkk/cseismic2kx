@@ -35,11 +35,12 @@
     <body>
         <div class="user_info">
             {% if request.user.is_authenticated %} 
-            Hello {{ request.user }}, <a href="{% url user_signout %}?next=/">Sign out</a><br/>
-            <a href="{% url participant_events %}">Update Event Participation</a>
+            Hello {{ request.user }}, <a href="{% url user_signout %}?next=/">Sign out</a>
             {% else %}
             <a href="{% url user_signin %}?next={{request.get_full_path}}">Log In</a> | <a href="{% url registration_register %}?next={{request.get_full_path}}">Register</a> 
             {% endif %}
+            <br>
+            <a href="{% url participant_events %}">Update Event Participation</a>
         </div>
         <div style="float:left;"><div id="glowingLayout"></div></div>
         <h1 style="text-align: center;">
