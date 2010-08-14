@@ -12,10 +12,12 @@
         {% endif %}
         <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}/css/base.css" />
         <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}/css/custom-theme2/jquery-ui-1.8.2.custom.css" />
+        <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}/css/jquery.countdown.css" />
         <script type="text/javascript" src="{{ MEDIA_URL }}/js/jquery-1.4.2.min.js"></script>
         <script type="text/javascript" src="{{ MEDIA_URL }}/js/jquery-ui-1.8.2.custom.min.js"></script>
         <script type="text/javascript" src="{{ MEDIA_URL }}/js/jquery.innerfade.js"></script>
         <script type="text/javascript" src="{{ MEDIA_URL }}/js/jquery.jqDock.min.js"></script>
+        <script type="text/javascript" src="{{ MEDIA_URL }}/js/jquery.countdown.pack.js"></script>
         <script type="text/javascript" src="{{ MEDIA_URL }}/js/main.js"></script>
     {% block head %}
     {% endblock %}
@@ -39,6 +41,7 @@
             <a href="{% url user_signin %}?next={{request.get_full_path}}">Log In</a> | <a href="{% url registration_register %}?next={{request.get_full_path}}">Register</a> 
             {% endif %}
         </div>
+        <div style="float:left;"><div id="glowingLayout"></div></div>
         <h1 style="text-align: center;">
             <img src="{{ MEDIA_URL }}/images/cseismic2k10.png" alt="Cseismic-2K10">
         </h1>
@@ -50,7 +53,7 @@
             <a href="{% url gallery %}"><img src="{{ MEDIA_URL }}/images/menu/Gallery.gif" alt="{{ MEDIA_URL }}/images/menu/Gallery.png"></a>
             <a href="{% url contact_us %}"><img src="{{ MEDIA_URL }}/images/menu/Contact.gif" alt="{{ MEDIA_URL }}/images/menu/Contact.png"></a>
         </div>
-<hr>
+        <hr>
         <br>
         <div class="content">
         {% block content %}
