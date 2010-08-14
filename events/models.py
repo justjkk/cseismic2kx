@@ -1,5 +1,7 @@
 from django.db import models
 
+from home.models import YoutubeVideo
+
 class Event(models.Model):
     caption = models.CharField(max_length=30)
     classic_name = models.CharField(max_length=30)
@@ -11,6 +13,7 @@ class Event(models.Model):
     venue = models.CharField(max_length=50, null=True, blank=True)
     slug = models.SlugField(null=True, blank=True)
     is_active = models.BooleanField(default=True)
+    youtube_video = models.ForeignKey(YoutubeVideo, null=True, blank=True)
     class Meta:
         ordering = ['start_time', 'end_time']
     

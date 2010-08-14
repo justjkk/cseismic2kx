@@ -5,7 +5,8 @@
             $(document).ready( function() {
                 $('#events').accordion({
                     active: false,
-                    collapsible: true
+                    collapsible: true,
+                    autoHeight: false,
                 });
             });
         </script>
@@ -15,7 +16,12 @@
         <div id="events" class="accordion">
             {% for event in events %}
                 <h3>{{ event }}</h3>
-                <div>
+                <div id="event{{event.id}}">
+                    {% if event.youtube_video %}
+                    <div style="float:right; padding: 10px 10px 10px 30px;">
+                        <embed src="http://www.youtube.com/v/{{ event.youtube_video.video_id }}&amp;rel=0&amp;autoplay=1;" type="application/x-shockwave-flash" allowfullscreen="true" width="480" height="385"></embed>
+                    </div>
+                    {% endif %}
                     <h4>Description: </h4>
                     {% autoescape off %}
                     <p>{{ event.description }}</p>

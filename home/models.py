@@ -16,6 +16,6 @@ class NewsItem(models.Model):
       
 class YoutubeVideo(models.Model):
     video_id = models.CharField(max_length=255)
-    
+    title = models.CharField(max_length=100)
     def __unicode__(self):
-        return 'http://www.youtube.com/v/'+self.video_id
+        return self.title
