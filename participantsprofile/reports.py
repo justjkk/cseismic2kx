@@ -13,11 +13,11 @@ class ParticipantReport(reporting.Report):
     )
     group_by = [                   # list of fields and lookups for group-by options
         'college',
-        'user',
+        #'user',
     ]
     list_filter = [                # This are report filter options (similar to django-admin)
-       'college',
-       'events',
+        'events',
+        'college',
     ]
     
     detail_list_display = [        # if detail_list_display is defined user will be able to see how rows was grouped  
