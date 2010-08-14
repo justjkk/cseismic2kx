@@ -23,7 +23,7 @@
                 <ul>
                     {% for coordinator in event.list_coordinators %}
                         <li class="coordinator">
-                            {{ coordinator.fullname }}, {{ coordinator.get_academic_year_display }} - Ph: {{ coordinator.contact_phone }}
+                            {{ coordinator.fullname }}, {{ coordinator.get_academic_year_display }}{% if coordinator.contact_phone %}  - Ph: {{ coordinator.contact_phone }} {% endif %}
                         </li>
                     {% endfor %}
                 </ul>
