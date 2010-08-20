@@ -112,3 +112,6 @@ p.oneliner {
     margin: 5px 5px 5px 5px;
     padding: 5px 5px 5px 5px;
 }
+.notice p {
+    text-indent: 0px;
+}

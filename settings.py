@@ -113,6 +113,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.admin',
+    'django.contrib.gis',
     'south',
     'django_authopenid',
     
@@ -120,6 +121,7 @@ INSTALLED_APPS = (
     'cseismic2kx.events',
     'cseismic2kx.host',
     'cseismic2kx.registration',
+    'cseismic2kx.transport',
     'cseismic2kx.participantsprofile',
     'cseismic2kx.captcha',
 )
