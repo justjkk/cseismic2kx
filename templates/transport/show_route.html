@@ -136,7 +136,7 @@ function addStop(lat,lon,id, name, timings, is_layer_stop) {
        var marker = new OpenLayers.Marker(new OpenLayers.LonLat(lon,lat).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject()), icon16.clone());
     }
     marker.events.register("mouseover", marker, function(e){
-      $.growl.settings.displayTimeout = 10000;
+      $.growl.settings.displayTimeout = 4000;
 	   $.growl(name, timings);
 		OpenLayers.Event.stop(e);
 		});

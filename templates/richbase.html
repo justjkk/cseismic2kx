@@ -41,6 +41,8 @@
             {% endif %}
             <br>
             <a href="{% url participant_events %}">Update Event Participation</a>
+            <br>
+            <a href="{% url bus_routes %}">Transportation Facility</a>
         </div>
         <div style="float:left;"><div id="glowingLayout"></div></div>
         <h1 style="clear:both; text-align: center;">
@@ -66,9 +68,11 @@
             <a href="/">Home</a> |
             <a href="{% url events %}">Events</a> |
             <a href="{% url schedule %}">Schedule</a> |
+            <a href="{% url bus_routes %}">Transport</a> |
             <a href="{% url gallery %}">Gallery</a> |
             <a href="{% url contact_us %}">Contact Us</a> |
             <a href="{% url sitemap %}">Sitemap</a>
+            
         </div>
         <div class="license">
         <a rel="license" href="http://creativecommons.org/licenses/by/2.5/in/"><img alt="Creative Commons License" style="border-width:0" src="{{ MEDIA_URL }}/images/ccby80x15.png" /></a><br />Cseismic-2K10 is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/2.5/in/">Creative Commons Attribution 2.5 India License</a>.
