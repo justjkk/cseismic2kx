@@ -6,6 +6,11 @@ User_Types = (
    ('A','Admin')
 )
 
+BOOLEAN_HACK_CHOICES = (
+   ('Yes', 'Yes'),
+   ('No', 'No')
+)
+
 class College(models.Model):
     name = models.CharField(max_length=150)
     
@@ -25,6 +30,7 @@ class Participant(models.Model):
     college = models.ForeignKey(College, related_name='participants')
     roll_no = models.CharField(max_length=15)
     events = models.ManyToManyField(Event, null=True, blank=True)
+    email_verified = models.CharField(max_length=3, choices=BOOLEAN_HACK_CHOICES, default='No')
     class Meta:
         ordering = ('college',)
     def __unicode__(self):

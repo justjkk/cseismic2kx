@@ -24,5 +24,13 @@ def user_created(sender, user, request, **kwargs):
     for e in form.data.getlist('events'):
         participant.events.add(e)
 
-from registration.signals import user_registered
+def user_verification_updated(sender, user, request, **kwargs):
+    participant = Participant.objects.filter(user__user=user)
+    if participant is not None and len(participant) == 1:
+       participant = participant[0]
+       participant.email_verified = 'Yes'
+       participant.save()
+
+from registration.signals import user_registered, user_activated
 user_registered.connect(user_created)
+user_activated.connect(user_verification_updated)
