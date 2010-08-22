@@ -16,6 +16,7 @@ class ParticipantReport(reporting.Report):
         #'user',
     ]
     list_filter = [                # This are report filter options (similar to django-admin)
+        'user__user__is_active',
         'events',
         'college',
     ]
