@@ -1,0 +1,48 @@
+{% extends "richbase.html" %}
+{% block title %}
+{{ bus }}
+{% endblock %}
+{% block head %}
+<style type="text/css">
+   a.bus_route {
+      color: #fff;
+      text-decoration: none;
+   }
+   a.bus_route:hover {
+      color: #ff0;
+      text-decoration: underline;
+   }
+   td {
+      padding: 5px 50px 5px 50px;
+   }
+</style>
+{% endblock %}
+{% block content %}
+<p>The following buses will be operated on Saturday 28th of August 2010</p>
+<table style="border: 0">
+<tr>
+<td>
+{% for bus in buses %}
+<a class="bus_route" href="{% url show_route_textonly bus.id %}">{{ bus }}</a><br />
+{% endfor %}
+</td>
+<td>
+<h2 align="center">{{ bus }}</h2>
+<table border="1" style="border-color: #00f;">
+<tr>
+<th>Stop Name</th>
+<th>Time</th>
+</tr>
+{% for s in stop_timings %}
+<tr>
+   <td>{{ s.stop }}</td>
+   <td>{{ s.time }}</td>
+{% endfor %}
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<p><a href="{% url show_route bus.id %}">Click here</a> see the data in a map.</p>
+{% endblock %}
+

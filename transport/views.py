@@ -17,5 +17,19 @@ def show_route(request, id=1):
                 'bus':b,
                 'stops':stops,
             })
+
+def show_route_textonly(request, id=1):
+    buses = CollegeBus.objects.all()
+    b = get_object_or_404(CollegeBus,pk=id)
+    stop_timings = b.stop_timings.order_by('sequence')
+    return direct_to_template   (
+            request, 
+            'transport/show_route_textonly.html', 
+            {
+                'buses':buses,
+                'bus':b,
+                'stop_timings':stop_timings,
+            })
+
 def index(request):
    return HttpResponse('Yet to be implemented')
