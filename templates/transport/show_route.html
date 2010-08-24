@@ -10,7 +10,7 @@
 <style type="text/css">
    a.bus_route {
       color: #fff;
-      text-decoration: none;
+      /*text-decoration: none;*/
    }
    a.bus_route:hover {
       color: #ff0;
@@ -169,12 +169,12 @@ function enableMapClick(enable) {
 <tr>
 <td>
 {% for bus in buses %}
-<a class="bus_route" href="{% url show_route bus.id %}">{{ bus }}</a><br />
+<a class="bus_route" href="{% url show_route bus.id %}">{{ bus.name }} ({{ bus.route_name}})</a><br />
 {% endfor %}
 </td>
 <!--/div-->
 <td>
-<h2 align="center">{{ bus }}</h2>
+<h2 align="center">{{ bus.route_name }} (Bus Name: {{ bus.name  }}) <a style="font-size: medium;" href="{% url show_route_textonly bus.id%}">View Timings</a></h2>
 <div id="map" style="width: 600px; height:400px; margin: 0px !important;
 padding: 0px !important;
 z-index: 0;"></div>

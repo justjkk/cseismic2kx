@@ -6,7 +6,7 @@
 <style type="text/css">
    a.bus_route {
       color: #fff;
-      text-decoration: none;
+      /*text-decoration: none;*/
    }
    a.bus_route:hover {
       color: #ff0;
@@ -23,11 +23,11 @@
 <tr>
 <td>
 {% for bus in buses %}
-<a class="bus_route" href="{% url show_route_textonly bus.id %}">{{ bus }}</a><br />
+<a class="bus_route" href="{% url show_route_textonly bus.id %}">{{ bus.name }} ({{ bus.route_name }})</a><br />
 {% endfor %}
 </td>
 <td>
-<h2 align="center">{{ bus }}</h2>
+<h2 align="center">{{ bus.route_name }} (  Bus name: {{ bus.name }} ) <a style="font-size: medium;" href="{% url show_route bus.id%}">View Map</a></h2>
 <table border="1" style="border-color: #00f;">
 <tr>
 <th>Stop Name</th>
@@ -43,6 +43,5 @@
 </td>
 </tr>
 </table>
-<p><a href="{% url show_route bus.id %}">Click here</a> see the data in a map.</p>
 {% endblock %}
 
