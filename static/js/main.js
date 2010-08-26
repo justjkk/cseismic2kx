@@ -12,7 +12,7 @@ $(document).ready( function() {
     });
     $('#news').css({ visibility: "visible"});
     $('#menu').jqDock({labels: true, size: "80px"});
-	var symposiumDay = new Date(2010,7,28,8,30,0);
+	var symposiumDay = new Date(2010,7,28,8,0,0);
 	$('#glowingLayout').countdown({
 	    until: symposiumDay,
 	    compact: false,
