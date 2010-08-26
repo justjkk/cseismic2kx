@@ -9,8 +9,10 @@ class ParticipantAdmin(admin.ModelAdmin):
         'name',
         'email_id',
         'college',
+        'email_verified',
     )
     ordering = ('college',)
+    search_fields = ['name', 'email_id', 'user__user__username']
 
 class ParticipantEventAdmin(admin.ModelAdmin):
     list_display = (
