@@ -12,6 +12,7 @@ class ParticipantReport(reporting.Report):
         ('id', Count, 'Total'),
     )
     group_by = [                   # list of fields and lookups for group-by options
+        'groupby_hack',
         'college',
         #'user',
     ]

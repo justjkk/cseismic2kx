@@ -31,6 +31,7 @@ class Participant(models.Model):
     roll_no = models.CharField(max_length=15)
     events = models.ManyToManyField(Event, null=True, blank=True)
     email_verified = models.CharField(max_length=3, choices=BOOLEAN_HACK_CHOICES, default='No')
+    groupby_hack = models.CharField(max_length=100, default='Online Registrants')
     class Meta:
         ordering = ('college',)
     def __unicode__(self):
